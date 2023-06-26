@@ -1,0 +1,36 @@
+
+.container{
+    display: flex;
+    padding: 5vh;
+}
+
+.listaNav{
+    background-color:rgb(11, 9, 84) ;
+    list-style: none;
+    display: flex;
+    justify-content:space-between;
+   
+}
+
+li{
+    width:  14vh; 
+    &:hover {
+        transform: scale(1.02);
+        transition: 0.5s;
+      }
+}
+.cart{
+    display: flex;
+    justify-content: flex-end;
+    padding-left:9vh ;
+    &:hover {
+        transform: scale(1.08);
+        transition: 0.3s;
+      }
+}
+.compra{
+    font-size: 0.8em;
+    padding: 1vh;
+    background-color: red;
+    border-radius: 50%;
+}
