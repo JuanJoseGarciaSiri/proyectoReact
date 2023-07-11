@@ -3,11 +3,11 @@ import './stylesHeader.css';
 import Navbar from './Navbar/Navbar';
 
 
-const Header = () => {
+const Header = ({logo}) => {
     return(
         <header className='cabecera'>
             <div>
-               <a href='#' ><h1 className='logoTitulo'> PREMIER STORE </h1></a>
+               <a href='#' ><h1 className='logoTitulo'> {logo} </h1></a>
             </div>
             <div>
                 <nav>

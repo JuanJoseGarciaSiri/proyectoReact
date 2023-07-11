@@ -1,0 +1,33 @@
+
+  
+.card {
+    background-color: rgb(237, 237, 243);
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin: 5px; 
+    width: 400px; 
+    padding: 2vh;
+  
+}
+.imagenCard{
+    height: 30vh;
+    width: 35vh;
+    object-fit: cover;
+
+}
+.Prod{
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+.cardBody{
+    flex-direction: column;
+}
+.botones{
+color:aqua ;
+}
+.botonCart{
+
+}
