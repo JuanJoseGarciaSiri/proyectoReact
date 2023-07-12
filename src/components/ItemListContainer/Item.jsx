@@ -21,7 +21,9 @@ const Card= ({name,id,image,description,stock,price,onShowDetails})=>{
         <div key={id} className='card' onClick={()=>onShowDetails(id)}>
         <img className='imagenCard' src={image} alt={name}></img>
       <div className='cardBody'>
+        
          <h2 className='nombreProd'>{name}</h2>
+         <p className='Prod'>{id}</p>
          <p className='Prod'>{description}</p>
          <h3 className='Prod'>US$ {price}</h3>
          <p className='Prod'>{stock} left</p>
