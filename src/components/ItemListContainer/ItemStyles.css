@@ -9,13 +9,23 @@
     margin: 5px; 
     width: 400px; 
     padding: 2vh;
+    border-radius: 40px;
   
+}
+.card:hover{
+    scale: 1.05;
+    transition: 30ms;
 }
 .imagenCard{
     height: 30vh;
     width: 35vh;
     object-fit: cover;
 
+}
+.nombreProd{
+    color: #000;
+    justify-content: center;
+    align-items: center;
 }
 .Prod{
     justify-content: center;
@@ -26,8 +36,18 @@
     flex-direction: column;
 }
 .botones{
-color:aqua ;
+background-color:rgb(59, 189, 189) ;    border-radius: 8px;
+
 }
 .botonCart{
-
+    background-color:rgb(59, 189, 189) ;
+    border-radius: 8px;
+    margin: 3%;
+    justify-content: space-around;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    background-color: cadetblue;
+    align-items: center;
 }
