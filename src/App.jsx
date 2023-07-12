@@ -3,37 +3,60 @@ import './App.css'
 import Header from './components/Header'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Card from './components/ItemListContainer/Item';
+import Details from './components/ItemDetailContainer/ItemDetail';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
- const [product,setProduct]=useState([]);
+  const [product, setProduct] = useState([]);
+  const [showDetails, setShowDetails] = useState(false);
+  const [productDetail,setProductDetail]=useState(null);
+ 
+ 
+  const onShowDetails=(id)=>{
+    setShowDetails(true);
+    const findProducts=product.find((product)=>product.id===id);
+    setProductDetail(findProducts); 
+  }
 
-  useEffect(()=>{
-    const productos = async()=>{
+  useEffect(() => {
+    const productos = async () => {
       try {
-        const response=await fetch('https://64ac7c189edb4181202f9368.mockapi.io/products',{
-          method:'GET',
-          headers:{
-            'content-type':'application/json',
+        const response = await fetch('https://64ac7c189edb4181202f9368.mockapi.io/products', {
+          method: 'GET',
+          headers: {
+            'content-type': 'application/json',
           },
         })
-        const data= await response.json();
+        const data = await response.json();
         setProduct(data);
       } catch (error) {
       }
     }
-    productos(),[]
+    productos(), []
   })
+
+
   return (
     <>
       <div>
-        <Header logo="PREMIER STORE"/>   
+        <Header logo="PREMIER STORE" />
       </div>
-      <ItemListContainer greeting=" Bienvenido a Premier Store!"/>
+      <ItemListContainer greeting=" Bienvenido a Premier Store!" />
+      {showDetails ? (
+        <>
+        <div>
+        <button onClick={() => setShowDetails(false)} className='botonVolver'>Volver</button>
+        <Details {...productDetail}/>
+        </div>
+      </>
+      ):(
       <div className='cards'>
-       { product.map((product)=>(
-        <Card {...product}/>
+        {product.map((product) => (
+          <Card {...product} onShowDetails={onShowDetails}/>
         ))
-     } </div>
+        } </div>
+      )}
+
     </>
   )
 }

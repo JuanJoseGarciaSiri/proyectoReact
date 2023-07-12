@@ -2,7 +2,7 @@ import './ItemStyles.css';
 import Counter from './itemCount';
 import { useState } from 'react';
 
-const Card= ({name,id,image,description,stock,price})=>{
+const Card= ({name,id,image,description,stock,price,onShowDetails})=>{
   
   const [counter,setCounter]=useState(0);
   const isValidCounter = counter > 0;
@@ -18,7 +18,7 @@ const Card= ({name,id,image,description,stock,price})=>{
   }; 
   return (
         <div className='container'>
-        <div key={id} className='card'>
+        <div key={id} className='card' onClick={()=>onShowDetails(id)}>
         <img className='imagenCard' src={image} alt={name}></img>
       <div className='cardBody'>
          <h2 className='nombreProd'>{name}</h2>
@@ -29,9 +29,9 @@ const Card= ({name,id,image,description,stock,price})=>{
       <div className='botones'>
         <button className='botonCart'><p className='Prod'>Add to Cart</p></button>
       </div>
-      <div className='cont'>
+      {/* <div className='cont'>
         <Counter isValidCounter={isValidCounter} onRemove={DisminuirCount} onAdd={AumentarCount} counter={counter} />
-      </div>
+       </div>*/}
      </div>
      </div>
     )

@@ -3,4 +3,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    overflow: hidden;
+
+}
+.botonVolver{
+    padding:2%;
+    background-color: grey;
+    border-radius: 17%;
+    margin:5vh
 }
