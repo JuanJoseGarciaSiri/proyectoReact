@@ -35,10 +35,7 @@
 .cardBody{
     flex-direction: column;
 }
-.botones{
-background-color:rgb(59, 189, 189) ;    border-radius: 8px;
 
-}
 .botonCart{
     background-color:rgb(140, 146, 146) ;
     border-radius: 8px;

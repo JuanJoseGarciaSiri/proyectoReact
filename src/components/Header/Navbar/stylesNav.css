@@ -8,6 +8,7 @@
     background-color:rgb(11, 9, 84) ;
     list-style: none;
     display: flex;
+    margin:2%;
     justify-content:space-between;
    
 }
@@ -33,4 +34,7 @@ li{
     padding: 1vh;
     background-color: red;
     border-radius: 50%;
+}
+.list{
+    padding:3vh;
 }
